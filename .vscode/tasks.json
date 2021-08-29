@@ -5,7 +5,8 @@
 		{
 			"label": "_makebuildfolder",
 			"type": "shell",
-			"command": "mkdir -p ${workspaceFolder}/build",
+			"command": "cmd",
+			"args": ["/C", "IF NOT EXIST \"${workspaceFolder}/build\" (mkdir -p ${workspaceFolder}/build)"],
 			"problemMatcher": [],
 			"group": "none"
 		},
